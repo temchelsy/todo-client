@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../AuthPage/AuthContext";
 import { CheckCircle, Clock, List, Circle, Trash2 } from "lucide-react"; 
 import TodoModal from "../../Components/Modals/Todo";
 import { toast } from "sonner";

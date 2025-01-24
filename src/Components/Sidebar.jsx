@@ -26,8 +26,8 @@ const Sidebar = () => {
   const menuItems = [
     { icon: Home, text: 'Home', path: '/' },
     { icon: Grid, text: 'Overview', path: '/dasklow' },  // Updated path here
-    { icon: Clock, text: 'Pending Todos', path: '/dasklow/pending' },
-    { icon: CheckCircle, text: 'Completed', path: '/dasklow/completed' },
+    // { icon: Clock, text: 'Pending Todos', path: '/dasklow/pending' },
+    // { icon: CheckCircle, text: 'Completed', path: '/dasklow/completed' },
     { icon: Settings, text: 'Settings', path: '/dasklow/settings' }
   ];
 
@@ -59,9 +59,7 @@ const Sidebar = () => {
         `}
       >
         <div className="p-6 border-b flex items-center gap-4">
-          <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center">  
-            <span className="text-white font-bold">D</span>
-          </div>
+          
           <h1
             className={`font-bold text-xl text-white transition-opacity duration-300
               ${isOpen ? 'opacity-100' : 'opacity-0'}

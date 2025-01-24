@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../Pages/AuthContext';
+import { useAuth } from '../Pages/AuthPage/AuthContext';
 import { toast } from 'sonner';
 
 const OauthCallback = () => {

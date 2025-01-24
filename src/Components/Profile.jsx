@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { CiLogout } from "react-icons/ci";
 import { UserCircle } from "lucide-react";
-import { useAuth } from "../Pages/AuthContext";
+import { useAuth } from "../Pages/AuthPage/AuthContext";
 
 const Profile = () => {
   const { currentUser, currentUserLoading, logout } = useAuth();
