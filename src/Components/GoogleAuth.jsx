@@ -20,7 +20,7 @@ const GoogleAuth = () => {
     setLoading(true);
     try {
       
-      window.location.href = `http://localhost:5000/users/auth/google`;
+      window.location.href = `https://todo-fn88.onrender.com/users/auth/google`;
     } catch (error) {
       console.error("Google login failed:", error);
       setLoading(false);
