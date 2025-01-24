@@ -4,16 +4,16 @@ import Home from './Pages/HomePage/Home';
 import Login from './Pages/AuthPage/Login';
 import Registrations from './Pages/AuthPage/Registrations';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { AuthProvider } from './Pages/AuthContext';
+import { AuthProvider } from './Pages/AuthPage/AuthContext';
 import VerifyEmail from './Components/VerifyEmail';
 import VerifyEmails from './Components/VerifyEmails';
-import Dashboard from './Pages/Dashboard';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import OauthCallback from './Components/OauthCallback';
 import { Toaster } from 'sonner';
-import Pending from './Pages/DashboardOutlets/Pending';
-import Completed from './Pages/DashboardOutlets/Completed';
-import Overview from './Pages/DashboardOutlets/Overview';
-import Settings from './Pages/DashboardOutlets/Settings';
+import Pending from './Pages/Dashboard/Pending';
+import Completed from './Pages/Dashboard/Completed';
+import Overview from './Pages/Dashboard/Overview';
+import Settings from './Pages/Dashboard/Settings';
 
 function App() {
   return (

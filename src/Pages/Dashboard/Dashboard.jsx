@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet, Navigate } from 'react-router-dom'; 
-import Sidebar from '../Components/Sidebar';
-import { useAuth } from './AuthContext';  
+import Sidebar from '../../Components/Sidebar';
+import { useAuth } from '../AuthPage/AuthContext';  
 
 const Dashboard = () => {
   const { isAuthenticated } = useAuth();
