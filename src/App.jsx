@@ -10,10 +10,8 @@ import VerifyEmails from './Components/VerifyEmails';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import OauthCallback from './Components/OauthCallback';
 import { Toaster } from 'sonner';
-import Pending from './Pages/Dashboard/Pending';
-import Completed from './Pages/Dashboard/Completed';
 import Overview from './Pages/Dashboard/Overview';
-import Settings from './Pages/Dashboard/Settings';
+
 
 function App() {
   return (
@@ -29,9 +27,7 @@ function App() {
           <Route path="/oauth-callback" element={<OauthCallback />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<Overview />} />
-            <Route path="settings" element={<Settings />} />
-            <Route path="pending" element={<Pending />} />
-            <Route path="completed" element={<Completed />} />
+           
           </Route>
         </Routes>
       </Router>
