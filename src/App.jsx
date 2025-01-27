@@ -11,27 +11,32 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import OauthCallback from './Components/OauthCallback';
 import { Toaster } from 'sonner';
 import Overview from './Pages/Dashboard/Overview';
-
+import SupervisorTodoPage from './Pages/invite'; 
 
 function App() {
   return (
-    <AuthProvider>
-      <Toaster richColors />
-      <Router>
+    <Router>
+      <AuthProvider>
+        <Toaster />
         <Routes>
+          {/* Top-level routes */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registrations />} />
-          <Route path="/verify-email" element={<VerifyEmails />} />
-          <Route path="/verify-email/:token" element={<VerifyEmail />} />
-          <Route path="/oauth-callback" element={<OauthCallback />} />
+          <Route path="/verify" element={<VerifyEmail />} />
+          <Route path="/verify-emails" element={<VerifyEmails />} />
+          <Route path="/oauth/callback" element={<OauthCallback />} />
+          
+          {/* Nested routes for Dashboard */}
           <Route path="/dashboard" element={<Dashboard />}>
-            <Route index element={<Overview />} />
-           
+            <Route index element={<Overview />} /> {/* Default child for /dashboard */}
           </Route>
+          
+          {/* Supervisor Todo Page Route */}
+          <Route path="/supervisor-todos" element={<SupervisorTodoPage />} />
         </Routes>
-      </Router>
-    </AuthProvider>
+      </AuthProvider>
+    </Router>
   );
 }
 

@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     try {
       console.log('Fetching current user with token:', token);
       
-      const response = await fetch(`https://todo-fn88.onrender.com/users/current-user`, {  // Corrected URL
+      const response = await fetch(`http://localhost:5000/users/current-user`, {  // Corrected URL
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
