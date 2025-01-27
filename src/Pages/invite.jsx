@@ -23,7 +23,7 @@ const SupervisorTodoPage = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.get(
-        `http://localhost:5000/todos/api/todos/${currentUser._id}`,
+        `https://todo-fn88.onrender.com/todos/api/todos/${currentUser._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -43,7 +43,7 @@ const SupervisorTodoPage = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.post(
-        `http://localhost:5000/todos/api/supervisor/todos/${todoId}/comments`,
+        `https://todo-fn88.onrender.com/todos/api/supervisor/todos/${todoId}/comments`,
         { text: commentText },
         {
           headers: {
@@ -68,7 +68,7 @@ const SupervisorTodoPage = () => {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.put(
-        `http://localhost:5000/todos/api/supervisor/todos/${todoId}/status`,
+        `https://todo-fn88.onrender.com/todos/api/supervisor/todos/${todoId}/status`,
         { status },
         {
           headers: {
