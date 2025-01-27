@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import GoogleAuth from "../../Components/GoogleAuth";
-import { FiCheckSquare } from "react-icons/fi"; // Example logo icon
+import { FiCheckSquare } from "react-icons/fi"; 
 
 const Registration = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -20,7 +20,7 @@ const Registration = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      const response = await fetch(`https://todo-fn88.onrender.com/users/register`, {
+      const response = await fetch(`http://localhost:5000/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const Registration = () => {
       console.error("Registration error:", error);
       toast.error("An error occurred during registration. Please try again later.");
     } finally {
-      setLoading(false); // Ensure loading state is reset in all cases
+      setLoading(false); 
     }
   };
 
