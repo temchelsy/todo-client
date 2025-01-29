@@ -26,14 +26,15 @@ function App() {
           <Route path="/verify" element={<VerifyEmail />} />
           <Route path="/verify-emails" element={<VerifyEmails />} />
           <Route path="/oauth/callback" element={<OauthCallback />} />
+          <Route path="/supervisor/todos/:id" element={<SupervisorTodoPage />} />
           
           {/* Nested routes for Dashboard */}
           <Route path="/dashboard" element={<Dashboard />}>
-            <Route index element={<Overview />} /> {/* Default child for /dashboard */}
+            <Route index element={<Overview />} /> 
           </Route>
           
           {/* Supervisor Todo Page Route */}
-          <Route path="/supervisor-todos" element={<SupervisorTodoPage />} />
+          
         </Routes>
       </AuthProvider>
     </Router>
