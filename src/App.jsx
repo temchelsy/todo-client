@@ -10,7 +10,7 @@ import Login from './Pages/AuthPage/Login';
 import Registrations from './Pages/AuthPage/Registrations';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Overview from './Pages/Dashboard/Overview';
-import SupervisorTodoPage from './Pages/SupervisorTodoPage';
+import SupervisorTodoPage from './Pages/invite';
 
 // Components
 import VerifyEmail from './Components/VerifyEmail';
