@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -33,11 +30,12 @@ const SupervisorTodoPage = () => {
       const response = await axios.get(
         `https://todo-fn88.onrender.com/api/supervisor/todos/${id}`,
         {
-          headers: { Authorization: `Bearer ${token}` }
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
       setTodo(response.data);
     } catch (error) {
+      console.error("Error fetching todo:", error); // Log the error
       const errorMessage = error.response?.data?.error || "Failed to load todo";
       toast.error(errorMessage);
       if (error.response?.status === 401) {
@@ -65,13 +63,14 @@ const SupervisorTodoPage = () => {
         `https://todo-fn88.onrender.com/api/supervisor/todos/${id}/comments`,
         { text: commentText },
         {
-          headers: { Authorization: `Bearer ${token}` }
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
       setTodo(response.data);
       setCommentText("");
       toast.success("Comment added successfully");
     } catch (error) {
+      console.error("Error adding comment:", error); // Log the error
       toast.error(error.response?.data?.error || "Failed to add comment");
     }
   };
@@ -88,12 +87,13 @@ const SupervisorTodoPage = () => {
         `https://todo-fn88.onrender.com/api/supervisor/todos/${id}/status`,
         { status },
         {
-          headers: { Authorization: `Bearer ${token}` }
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
       setTodo(response.data);
       toast.success("Status updated successfully");
     } catch (error) {
+      console.error("Error updating status:", error); // Log the error
       toast.error(error.response?.data?.error || "Failed to update status");
     }
   };
